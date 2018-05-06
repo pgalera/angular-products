@@ -8,7 +8,9 @@ import { IProduct } from 'interfaces/i-product';
 })
 export class ProductListComponent implements OnInit {
   title = "Mi lista de productos"
-  headers = {desc: 'Producto', price: 'Precio', avail: 'Disponible'};
+  headers = {image: 'Imagen', desc: 'Producto', price: 'Precio', avail: 'Disponible'};
+  showImage = true;
+  filterSearch: string = '';
 
   products: IProduct[] = [{
     id: 1,
@@ -26,9 +28,15 @@ export class ProductListComponent implements OnInit {
     rating: 4
   }]
 
+
+  toggleImage() {
+    this.showImage = !this.showImage;
+  }
+
   constructor() { }
 
   ngOnInit() {
+    console.log("ProductListComponent has been initialized!");
   }
 
 }
