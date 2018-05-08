@@ -3,15 +3,15 @@
     {{title}}
   </div>
   <div class="card-block">
-    <form class="form">
+    <form class="form mt-3">
       <div class="form-group row">
         <label class="col-form-label col-sm-2 text-sm-right"
                 for="filterDesc">Filtro:</label>
         <div class="col-sm-5">
           <input type="text" [(ngModel)]="filterSearch" class="form-control"
-                  name="filterDesc" id="filterDesc" placeholder="Filter...">
+                  name="filterDesc" id="filterDesc" placeholder="Filtro...">
         </div>
-        <label class="col-form-label col-sm-5">
+        <label class="col-form-label col-sm-5" *ngIf="filterSearch">
                 Filtrando por: {{filterSearch}}</label>
       </div>
     </form>
